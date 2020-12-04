@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>Compra de tickets cinema</title>
+</head>
+
+<body>
+  <div class="movie-container">
+    <label>Selecione um filme</label>
+    <select id="movie">
+      <option value="25">Querida, Encolhi as Crianças (R$25)</option>
+      <option value="40">O Rei Leão - Lançamento (R$40)</option>
+    </select>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <small>N/A</small>
+    </li>
+    <li>
+      <div class="seat selected"></div>
+      <small>Reservado</small>
+    </li>
+    <li>
+      <div class="seat occupied"></div>
+      <small>Ocupado</small>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="screen"></div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+
+  <p class="text">
+    Você selecionou <span id="count">0</span> lugares com o valor de R$<span id="price">0</span>
+  </p>
+  <div class="show-btn">
+    <button>Ir para o pagamento</button>
+  </div>
+  <div class="modal">
+    <div class="top-content">
+      <div class="title-modal">
+        Formas de pagamento
+      </div>
+    </div>
+
+    <div class="bottom-content">
+      
+      <section>
+      <label class="input-area">
+        <input type="radio" name="light" checked>
+        <span class="design"></span>
+        <span class="text">Dinheiro</span>
+      </label>
+
+      <label class="input-area">
+        <input type="radio" name="light" checked>
+        <span class="design"></span>
+        <span class="text">Cartão de Débito</span>
+      </label>
+
+      <label class="input-area">
+        <input type="radio" name="light" checked>
+        <span class="design"></span>
+        <span class="text">Cartão de Crédito</span>
+      </label>
+      </section>
+
+      <div class="close-btn">
+        <button>Prosseguir</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.show-btn').click(function () {
+      $('.modal').toggleClass("show");
+      $('.show-btn').addClass("disabled");
+    });
+    $('.close-icon').click(function () {
+      $('.modal').toggleClass("show");
+      $('.show-btn').removeClass("disabled");
+    });
+    $('.close-btn').click(function () {
+      $('.modal').toggleClass("show");
+      $('.show-btn').removeClass("disabled");
+    });
+  </script>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
